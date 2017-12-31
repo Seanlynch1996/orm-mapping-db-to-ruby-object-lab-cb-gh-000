@@ -41,7 +41,7 @@ class Student
       WHERE grade = 9
       SQL
     count = 0
-    DB[conn:].execute(sql)
+    
   end
 
 
