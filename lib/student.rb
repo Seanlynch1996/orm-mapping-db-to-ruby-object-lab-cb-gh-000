@@ -33,9 +33,18 @@ class Student
       SQL
 
     self.new_from_db(DB[:conn].execute(sql, name).first)
-
-
   end
+
+  def self.count_all_students_in_grade_9
+    sql = <<-SQL
+      SELECT * FROM students
+      WHERE grade = 9
+      SQL
+    count = 0
+    DB[conn:].execute(sql).map do |row|
+      count += 1
+    end
+    count
 
   def save
     sql = <<-SQL
