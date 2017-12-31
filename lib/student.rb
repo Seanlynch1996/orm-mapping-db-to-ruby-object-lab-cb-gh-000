@@ -30,7 +30,7 @@ class Student
       SELECT * FROM students
       WHERE name = ?;
       SQL
-    DB[:conn].execute(sql)[0].new_from_db
+    DB[:conn].execute(sql)[0].self.new_from_db
   end
 
   def save
