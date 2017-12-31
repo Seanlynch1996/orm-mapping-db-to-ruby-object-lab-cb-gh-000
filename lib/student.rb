@@ -38,9 +38,8 @@ class Student
   def self.count_all_students_in_grade_9
     sql = <<-SQL
       SELECT * FROM students
-      
       SQL
-    DB[conn:].execute(sql)
+    #DB[conn:].execute(sql)
   end
 
 
