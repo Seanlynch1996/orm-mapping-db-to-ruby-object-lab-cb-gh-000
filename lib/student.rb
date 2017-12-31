@@ -45,6 +45,8 @@ class Student
       count += 1
     end
     count
+  end
+  
 
   def save
     sql = <<-SQL
