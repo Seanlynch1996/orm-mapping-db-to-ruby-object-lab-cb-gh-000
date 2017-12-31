@@ -32,7 +32,10 @@ class Student
       LIMIT 1;
       SQL
 
-    self.new_from_db(DB[:conn].execute(sql)[0])
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
+    
 
   end
 
