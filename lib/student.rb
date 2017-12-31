@@ -41,12 +41,9 @@ class Student
       WHERE grade = 9
       SQL
     count = 0
-    DB[conn:].execute(sql).map do |row|
-      count += 1
-    end
-    count
+    DB[conn:].execute(sql)
   end
-  
+
 
   def save
     sql = <<-SQL
