@@ -40,8 +40,7 @@ class Student
       SELECT COUNT(name) FROM students
       WHERE grade = 9
       SQL
-    DB[conn:].execute(sql)
-    
+    DB[conn:].execute(sql).first
 
   end
 
